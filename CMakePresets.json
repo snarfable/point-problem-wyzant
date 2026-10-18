@@ -3,7 +3,7 @@
     "configurePresets": [
         {
             "name": "production",
-            "displayName": "Configure preset using toolchain file",
+            "displayName": "Configure preset using Makefiles generator",
             "description": "Sets Unix Makefiles generator, build and install directory",
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
