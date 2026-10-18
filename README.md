@@ -1,3 +1,9 @@
+# Solution to Wyzant Point Conversion to Spherical Question
+
+This is my solution to a question posted on Wyzant which I was unable to post because the answer was more than 10,000 characters.
+
+## Summary
+
 Here's a better implementation.
 
 I've added a stream operator overload that allows you to specify how you want the coordinates output, cartesian or spherical. So to print a Point, you simply run
@@ -11,6 +17,8 @@ std::cout << "Point in cartesian: " << cartesian << point << std::endl;
 std::cout << "Point in spherical: " << spherical << point << std::endl;
 ```
 
+## Build Files
+
 But before I add the source, here's a CMakeLists.txt and a CMakePresets.json file so you're guaranteed to get the right compile options on the command line.
 
 Place the text from CMakeLists.txt and CMakePresets.json into files by those names and place the code from the box with the solution at the bottom into a file named problem.cpp. Then cd into that directory and run:
@@ -19,6 +27,8 @@ Place the text from CMakeLists.txt and CMakePresets.json into files by those nam
 cmake --preset=production
 cmake --build --preset=build-production
 ```
+
+## How to Run the Solution
 
 This should give you the result in out/build/production/problem, which you can run via:
 
@@ -44,14 +54,22 @@ Spherical: Point(5.19615, 0.955317, 0.785398)
 
 Note that the output angles are in radians. I'll leave it as a fun exercise to write stream modifiers named "radians" and "degrees" similar to "cartesian" and "spherical" in order to tell the stream to write output of spherical coordinates in either radians or degrees. Try it. It's useful to know how to do.
 
+## CMake and GCC Version Details
+
+In order to get this solution to build, make sure you're using these versions at least for CMake and GCC.
+
 CMake version: 3.28.3
 GNU GCC version: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+## The Repository with Devcontainer Files
 
 Specifically, I ran this in a devcontainer in VS Code. The devcontainer.json and Dockerfile are listed below as well.
 
 The repository containing all of these files can be found at https://github.com/snarfable/point-problem-wyzant. In VS Code, make sure you have the Dev Containers (formerly known as Remote - Containers) installed, and then you can run Ctrl+Shift+P and type "Clone repository" which should bring up Clone Repository in Named Container Volume. See image below. Then you might see a window pop up asking whether you want to trust the workspace. Select to trust it and everything should build and you should end up with exactly the same development environment under which I built this example.
 
 Good luck and let me know if anyone needs any additional help.
+
+## Explicit Listing of File Contents
 
 Here are the files explicitly.
 
