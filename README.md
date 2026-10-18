@@ -55,8 +55,8 @@ Good luck and let me know if anyone needs any additional help.
 
 Here are the files explicitly.
 
-```json
 .devcontainer/devcontainer.json:
+```json
 {
   "name": "C++ and CMake",
   "build": {
@@ -75,7 +75,6 @@ Here are the files explicitly.
 ```
 
 .devcontainer/Dockerfile:
-
 ```Dockerfile
 FROM ubuntu:24.04
 
